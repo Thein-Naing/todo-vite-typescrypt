@@ -21,7 +21,7 @@ const App: FC = () => {
         todoName: todo,
         days: days};
 
-    setTodoList([...todoList, todo])
+    setTodoList([...todoList, newTodo])
 
     }
 
