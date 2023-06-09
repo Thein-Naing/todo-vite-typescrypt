@@ -8,7 +8,7 @@ then
   - npm install
   - npm run dev)
  
-    You can check final site here : https://react-exercises-todo-vite-typescrypt.netlify.app/.
+    You can check final site here : https://react-exercises-todo-vite-typescrypt.netlify.app/
 
 
 
