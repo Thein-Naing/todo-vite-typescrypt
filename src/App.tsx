@@ -1,12 +1,12 @@
 import './App.css';
-import {TodoList} from './components/Todolist';
+// import {TodoList} from './components/Todolist';
 import React, { FC } from 'react';
 
-function App() {
+const App: FC = () => {
 
 
   return (
-    <>
+
       <div className="App">
         <div className="header">
           <input
@@ -18,21 +18,12 @@ function App() {
           </div>
           {/* <button>Add</button> */}
 
-          <div className="todolist">
-
+          {/* <div className="todolist"> */}
 
         </div>
+      // </div>
 
-
-
-
-
-      </div>
-
-
-
-    </>
   )
 }
 
-export default App
+export default App;
