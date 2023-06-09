@@ -1,14 +1,15 @@
 -  This is my first vite-typescrypt project. after learning tutorials from PedroTech youtube channel/George web dev youtube channel.
- 
-    You can check final site here : https://react-exercises-todo-vite-typescrypt.netlify.app/.
-
-
-1- npm create vite
+-  (- npm create vite
 - ✔ Project name: … vite-project
 ✔ Select a framework: › React
 ✔ Select a variant: › TypeScript
 then   
   - cd vite-project
   - npm install
-  - npm run dev
+  - npm run dev)
+ 
+    You can check final site here : https://react-exercises-todo-vite-typescrypt.netlify.app/.
+
+
+
 
