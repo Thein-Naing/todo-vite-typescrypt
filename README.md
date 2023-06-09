@@ -15,3 +15,4 @@ return (  .... in App.tsx.3.
 2- import React, { FC } from 'react'; then change function type to arrow function type with FC,
 -  const App: FC = () => {
 return (  .... in App.tsx.
+-   btw , FC = function component.
