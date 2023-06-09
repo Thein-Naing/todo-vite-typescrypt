@@ -1,4 +1,4 @@
 export interface ITodo {
-  taskName: string;
+  todoName: string;
   days: number;
 }

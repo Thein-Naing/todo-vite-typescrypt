@@ -6,7 +6,7 @@ import { ITodo } from "./Interfaces";
 const App: FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [days, setDays] = useState<number>(0);
-  const [todoList, setTodoList] = useState<ITask[]>([]);
+  const [todoList, setTodoList] = useState<ITodo[]>([]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     if (event.target.name === "todo") {
@@ -17,7 +17,12 @@ const App: FC = () => {
   };
 
     const addTodo = (): void => {
- setTodoList([...todoList, todo])
+      const newTodo = {
+        todoName: todo,
+        days: days};
+
+    setTodoList([...todoList, todo])
+
     }
 
 
