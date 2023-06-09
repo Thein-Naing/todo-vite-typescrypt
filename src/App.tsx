@@ -1,17 +1,18 @@
-import './App.css';
-// import {TodoList} from './components/Todolist';
-import React, { FC, useState, ChangeEvent } from 'react';
+import React, { FC, ChangeEvent, useState } from "react";
+import "./App.css";
+// import TodoTask from "./Components/TodoTask";
+// import { ITask } from "./Interfaces";
 
 const App: FC = () => {
-  const [task, setTask] = useState<string>('');
+  const [task, setTask] = useState<string>("");
   const [days, setDays] = useState<number>(0);
-  const [todo, setTodoList] = useState<string>([]);
+  const [todoList, setTodoList] = useState<ITask[]>([]);
 
-const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    if (event.target.name === 'task')
-    setTask(event.target.value)
+  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    if (event.target.name === "task") {
+      setTask(event.target.value);
     } else {
-      setDays(Number(event.target.value))
+      setDays(Number(event.target.value));
     }
   };
   return (
