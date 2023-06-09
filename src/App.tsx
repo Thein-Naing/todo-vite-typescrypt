@@ -1,20 +1,30 @@
-import React, { FC, ChangeEvent, useState } from "react";
+import { FC, ChangeEvent, useState } from "react";
 import "./App.css";
 // import TodoTask from "./Components/TodoTask";
-import { ITask } from "./Interfaces";
+import { ITodo } from "./Interfaces";
 
 const App: FC = () => {
-  const [task, setTask] = useState<string>("");
+  const [todo, setTodo] = useState<string>("");
   const [days, setDays] = useState<number>(0);
   const [todoList, setTodoList] = useState<ITask[]>([]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    if (event.target.name === "task") {
-      setTask(event.target.value);
+    if (event.target.name === "todo") {
+      setTodo(event.target.value);
     } else {
       setDays(Number(event.target.value));
     }
   };
+
+    const addTodo = (): void => {
+ setTodoList([...todoList, todo])
+    }
+
+
+
+
+
+
   return (
 
       <div className="App">
@@ -23,7 +33,7 @@ const App: FC = () => {
             <input
 
             onChange={handleChange}
-            name='task'
+            name='todo'
             type='text' placeholder='Add your todo'/>
 
             <input

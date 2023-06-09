@@ -1,4 +1,4 @@
-export interface ITask {
+export interface ITodo {
   taskName: string;
   days: number;
 }
