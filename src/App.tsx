@@ -1,7 +1,7 @@
 import React, { FC, ChangeEvent, useState } from "react";
 import "./App.css";
 // import TodoTask from "./Components/TodoTask";
-// import { ITask } from "./Interfaces";
+import { ITask } from "./Interfaces";
 
 const App: FC = () => {
   const [task, setTask] = useState<string>("");

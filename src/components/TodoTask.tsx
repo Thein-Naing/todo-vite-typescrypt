@@ -1,9 +1,9 @@
 import React from 'react'
 
-const todolist = () => {
+const todoTask = () => {
   return (
-    <div>todolist</div>
+    <div>todo</div>
   )
 }
 
-export default todolist
+export default todoTask
