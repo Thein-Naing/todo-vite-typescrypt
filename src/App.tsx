@@ -1,6 +1,6 @@
 import { FC, ChangeEvent, useState } from "react";
 import "./App.css";
-// import TodoTask from "./Components/TodoTask";
+import TodoTask from "./components/TodoTask";
 import { ITodo } from "./Interfaces";
 
 const App: FC = () => {
@@ -16,47 +16,49 @@ const App: FC = () => {
     }
   };
 
-    const addTodo = (): void => {
-      const newTodo = {
-        todoName: todo,
-        days: days};
+  const addTodo = (): void => {
+    const newTodo = { todoName: todo, days: days };
+    setTodoList([...todoList, newTodo]);
+    setTodo("");
+    setDays(0);
+  };
 
-    setTodoList([...todoList, newTodo])
-
-    }
-
-
-
-
-
+  const completeTodo = (todoNameToDelete: string): void => {
+    setTodoList(
+      todoList.filter((todo) => {
+        return todo.todoName != todoNameToDelete;
+      })
+    );
+  };
 
   return (
-
-      <div className="App">
-        <div className="header">
-            <div className="input_form_container">
-            <input
-
+    <div className="App">
+      <div className="header">
+        <div className="input_form_container">
+          <input
+            type="text"
+            placeholder="Add your todo"
+            name="todo"
+            value={todo}
             onChange={handleChange}
-            name='todo'
-            type='text' placeholder='Add your todo'/>
-
-            <input
-
+          />
+          <input
+            type="number"
+            placeholder="should be finished (in Days)..."
+            name="days"
+            value={days}
             onChange={handleChange}
-            name='days'
-            type='number'
-            placeholder='Need to finished( in days)'
-            />
-            </div>
-              <button>Add</button>
+          />
         </div>
-          {/* <button>Add</button> */}
-          <div className="todoList">
+        <button onClick={addTodo}>Add</button>
       </div>
-      // </div>
+      <div className="todoList">
+        {todoList.map((todo: ITodo, key: number) => {
+          return <TodoTask key={key} todo={todo} completeTask={completeTodo} />;
+        })}
+      </div>
+    </div>
+  );
+};
 
-  )
-}
-
-export default App;
+export default App

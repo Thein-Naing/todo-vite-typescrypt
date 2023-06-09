@@ -1,21 +1,20 @@
-import React from "react";
-import { ITask } from "../Interfaces";
+import { ITodo } from "../Interfaces";
 
 interface Props {
-  task: ITask;
-  completeTask(taskNameToDelete: string): void;
+  todo: ITodo;
+  completeTodo(todoNameToDelete: string): void;
 }
 
-const TodoTask = ({ task, completeTask }: Props) => {
+const TodoTask = ({ todo, completeTodo }: Props) => {
   return (
-    <div className="task">
+    <div className="todo">
       <div className="content">
-        <span>{task.taskName}</span>
-        <span>{task.deadline}</span>
+        <span>{todo.todoName}</span>
+        <span>{todo.days}</span>
       </div>
       <button
         onClick={() => {
-          completeTask(task.taskName);
+          completeTodo(todo.todoName);
         }}
       >
         X
