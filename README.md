@@ -18,11 +18,11 @@ return (  .... in App.tsx.
 -   btw , FC = function component.
 
 3- We will use ChangeEvent functon in handleChange event argument for multiple onChange events. 
-Also in our useState hooks, we will add <string> <number> objects, also we will use <HTMLInputElement> in  handleChange event argument as belows:
-  import React, { FC, useState, ChangeEvent } from 'react';
-  const App: FC = () => {
-  const [task, setTask] = useState<string>('');
-  const [days, setDays] = useState<number>(0);
-  const [todo, setTodoList] = useState<string>([]);
+    -   Also in our useState hooks, we will add <string> <number> objects, also we will use <HTMLInputElement> in  handleChange event argument as belows:
+        import React, { FC, useState, ChangeEvent } from 'react';
+    - const App: FC = () => {
+      const [task, setTask] = useState<string>('');
+      const [days, setDays] = useState<number>(0);
+      const [todo, setTodoList] = useState<string>([]);
 
-const handleChange = (event: ChangeEvent<HTMLInputElement>
+      const handleChange = (event: ChangeEvent<HTMLInputElement>
