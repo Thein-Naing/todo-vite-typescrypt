@@ -12,7 +12,7 @@ const TodoTask = ({ todo, completeTodo }: Props) => {
         <span>{todo.todoName}</span>
         <span>{todo.days}</span>
       </div>
-      <button
+      <button className='btn'
         onClick={() => {
           completeTodo(todo.todoName);
         }}

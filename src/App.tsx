@@ -35,9 +35,10 @@ const App: FC = () => {
     <div className="App">
       <div className="header">
         <div className="input_form_container">
+        <h2>Your Todo Today</h2>
           <input
             type="text"
-            placeholder="Add your todo"
+            placeholder="Add todo..."
             name="todo"
             value={todo}
             onChange={handleChange}
@@ -54,11 +55,11 @@ const App: FC = () => {
       </div>
       <div className="todoList">
         {todoList.map((todo: ITodo, key: number) => {
-          return <TodoTask key={key} todo={todo} completeTask={completeTodo} />;
+          return <TodoTask key={key} todo={todo} completeTodo={completeTodo} />;
         })}
       </div>
     </div>
   );
 };
 
-export default App
+export default App;
