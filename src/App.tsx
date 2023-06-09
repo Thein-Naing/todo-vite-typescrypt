@@ -9,18 +9,18 @@ const App: FC = () => {
 
       <div className="App">
         <div className="header">
-          <input
-          type='text' placeholder='Add your todo'/>
-          <input type='number'
-          placeholder='Need to finished( in days)'
-          />
-          <button>Add</button>
-          </div>
-          {/* <button>Add</button> */}
-
-          {/* <div className="todolist"> */}
-
+            <div className="input_form_container">
+            <input
+            type='text' placeholder='Add your todo'/>
+            <input type='number'
+            placeholder='Need to finished( in days)'
+            />
+            </div>
+              <button>Add</button>
         </div>
+          {/* <button>Add</button> */}
+          {/* <div className="todolist"> */}
+      </div>
       // </div>
 
   )
